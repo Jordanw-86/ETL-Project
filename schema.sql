@@ -1,0 +1,110 @@
+DROP TABLE IF EXISTS rotten_tomatoes;
+DROP TABLE IF EXISTS movies;
+DROP TABLE IF EXISTS imdb;
+
+CREATE TABLE rotten_tomatoes(
+   rotten_tomatoes_link             VARCHAR NOT NULL,
+   critics_consensus                VARCHAR NOT NULL,
+   streaming_release_date           VARCHAR NOT NULL,
+   tomatometer_status               VARCHAR NOT NULL,
+   tomatometer_rating               DECIMAL NOT NULL,
+   tomatometer_count                DECIMAL NOT NULL,
+   audience_status                  VARCHAR NOT NULL, 
+   audience_rating                  DECIMAL NOT NULL,
+   audience_count                   DECIMAL NOT NULL,
+   tomatometer_top_critics_count    INT NOT NULL,
+   tomatometer_fresh_critics_count  INT NOT NULL,
+   tomatometer_rotten_critics_count INT NOT NULL,
+   PRIMARY KEY(rotten_tomatoes_link)	
+);
+
+CREATE TABLE movies(
+  movie_id SERIAL PRIMARY KEY,
+  rotten_tomatoes_link   VARCHAR NOT NULL,
+  movie_title            VARCHAR NOT NULL, 
+  movie_info             VARCHAR NOT NULL,
+  content_rating         VARCHAR NOT NULL,
+  genres                 VARCHAR NOT NULL,
+  directors              VARCHAR NOT NULL,
+  authors                VARCHAR NOT NULL,
+  actors                 VARCHAR NOT NULL,
+  original_release_date  VARCHAR NOT NULL,
+  streaming_release_date VARCHAR NOT NULL, 
+  runtime                DECIMAL NOT NULL,
+  production_company     VARCHAR NOT NULL,
+  imdb_title_id          VARCHAR NOT NULL,
+  movie_title            VARCHAR NOT NULL,
+  original_title         VARCHAR NOT NULL,
+  year                   VARCHAR NOT NULL,
+  original_release_date  VARCHAR NOT NULL,
+  genre                  VARCHAR NOT NULL,
+  duration               INT NOT NULL,
+  country                VARCHAR NOT NULL,
+  language               VARCHAR NOT NULL,
+  director               VARCHAR NOT NULL,
+  writer                 VARCHAR NOT NULL
+  production_company     VARCHAR NOT NULL,
+  actors                 VARCHAR NOT NULL,
+  description            VARCHAR NOT NULL,
+  budget                 VARCHAR NOT NULL,
+  usa_gross_income       VARCHAR NOT NULL,
+  worlwide_gross_income  VARCHAR NOT NULL,
+);
+
+CREATE TABLE imdb(
+  imdb_title_id     SERIAL PRIMARY KEY,
+  weighted_average_vote      DECIMAL NOT NULL,
+  total_votes                INT NOT NULL,
+  mean_vote                  DECIMAL NOT NULL,
+  median_vote                DECIMAL NOT NULL,
+  votes_10                   INT NOT NULL, 
+  votes_9                    INT NOT NULL  
+  votes_8                    INT NOT NULL,  
+  votes_7                    INT NOT NULL, 
+  votes_6                    INT NOT NULL, 
+  votes_5                    INT NOT NULL,  
+  votes_4                    INT NOT NULL, 
+  votes_3                    INT NOT NULL,  
+  votes_2                    INT NOT NULL,
+  votes_1                    INT NOT NULL, 
+  allgenders_0age_avg_vote   DECIMAL NOT NULL,
+  allgenders_0age_votes      DECIMAL NOT NULL,
+  allgenders_18age_avg_vote  DECIMAL NOT NULL,
+  allgenders_18age_votes     DECIMAL NOT NULL,
+  allgenders_30age_avg_vote  DECIMAL NOT NULL,
+  allgenders_30age_votes     DECIMAL NOT NULL,
+  allgenders_45age_avg_vote  DECIMAL NOT NULL,
+  allgenders_45age_votes     DECIMAL NOT NULL,
+  males_allages_avg_vote     DECIMAL NOT NULL,
+  males_allages_votes        DECIMAL NOT NULL,
+  males_0age_avg_vote        DECIMAL NOT NULL,
+  males_0age_votes           DECIMAL NOT NULL,
+  males_18age_avg_vote       DECIMAL NOT NULL,
+  males_18age_votes          DECIMAL NOT NULL,
+  males_30age_avg_vote       DECIMAL NOT NULL,
+  males_30age_votes          DECIMAL NOT NULL,
+  males_45age_avg_vote       DECIMAL NOT NULL,
+  males_45age_votes          DECIMAL NOT NULL,
+  females_allages_avg_vote   DECIMAL NOT NULL,
+  females_allages_votes      DECIMAL NOT NULL,
+  females_0age_avg_vote      DECIMAL NOT NULL,
+  females_0age_votes         DECIMAL NOT NULL,
+  females_18age_avg_vote     DECIMAL NOT NULL,
+  females_18age_votes        DECIMAL NOT NULL,
+  females_30age_avg_vote     DECIMAL NOT NULL,
+  females_30age_votes        DECIMAL NOT NULL,
+  females_45age_avg_vote     DECIMAL NOT NULL,
+  females_45age_votes        DECIMAL NOT NULL,
+  top1000_voters_rating      DECIMAL NOT NULL,
+  top1000_voters_votes       DECIMAL NOT NULL,
+  us_voters_rating           DECIMAL NOT NULL,
+  us_voters_votes            DECIMAL NOT NULL,
+ non_us_voters_rating        DECIMAL NOT NULL,
+ non_us_voters_votes         DECIMAL NOT NULL,
+);
+
+CREATE TABLE actors(
+
+
+  
+)
