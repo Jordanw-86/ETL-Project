@@ -104,7 +104,7 @@ CREATE TABLE imdb(
 );
 
 CREATE TABLE actors(
-
-
-  
-)
+  movie_title    VARCHAR NOT NULL,
+  imdb_title_id  VARCHAR NOT NULL,
+  actors_imdb    VARCHAR NOT NULL,
+);
