@@ -3,8 +3,9 @@ For the clean up process we imported the raw CSVs into pandas and dropped any un
 
 ## Transform
  For this project I removed duplicate columns in the process of cleaning the 3 CSV files. Once I got the dataframes clean, I  renamed columns merged on the movie title. This allows me to join these columns in Postgres.
+This process was a little diffuclt with the amount of time I had. Removing the duploicate columns and merging on the like columns allowed me to add a lot of depth to these databases. 
 
 
 
 ## Load
-For loading this data, I used a bit of SQLalchamy "df_rt.to_sql(name='rotten_tomatoes', con=engine, if_exists='append', index=False) in order load these new dataframes into SQL
+For loading this data, I used a bit of SQLalchamy "df_rt.to_sql(name='rotten_tomatoes', con=engine, if_exists='append', index=False) in order load these new dataframes into SQL. If there was more time, i would have liked to add an addtional database and join all the tables together. 
