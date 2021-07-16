@@ -49,6 +49,7 @@ CREATE TABLE movies(
   budget                 VARCHAR NOT NULL,
   usa_gross_income       VARCHAR NOT NULL,
   worlwide_gross_income  VARCHAR NOT NULL,
+  Foreign key(rotten_tomatoes_link)References rotten_tomatoes(rotten_tomatoes_link)
 );
 
 CREATE TABLE imdb(
